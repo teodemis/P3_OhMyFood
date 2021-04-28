@@ -1,0 +1,255 @@
+@import 'config';
+
+body{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  height:100%;
+  width:100%;
+  max-width:1500px;
+ 
+header{
+    width:100%;
+
+.logo {
+  display:flex;
+  justify-content: center;
+    font-family:$police-logo-titre;
+    font-size:40px;
+    margin-left:auto;
+    
+ }
+
+.header_conteneur{
+    display:block;
+    width:100%;
+    height:350px;
+    background-color:$fond-gris;
+
+  .header_location{
+      display:flex;
+      justify-content: center;
+      width:100%;
+      height:50px;
+      border-top:3px rgb(214, 213, 213) solid;
+   
+ .paris_location {
+     display:flex;
+     align-items:center;
+     padding:0.5rem;
+
+.header_loction_paragraph{
+     padding-left:.6rem;
+     font:bolder 1rem 'Roboto', sans-serif;
+     color:rgb(75, 72, 72);
+  
+ }
+    
+ .icon_location{
+     color:rgb(46, 45, 45);
+     font-size:15px;
+}
+}
+}
+.header_contneur_contenu{
+   text-align: center;
+
+ .titre_contenue{
+    @include h1-index;
+  }
+  .paragraph_contenu{
+  font:500 1.2rem'Roboto', sans-serif;
+  color:gray
+  }
+  button{
+   @include buttons;
+   @include section-p;
+   padding:0 2rem;
+
+  }
+}
+}
+}
+
+
+// section
+  .section_buttons{
+   text-align:center;
+    
+  .titre_buttons{
+      @include h1-index;
+    }
+
+  .buttons_dechoix{
+    display:flex;
+    flex-direction:column;
+     padding-left:0;
+
+  li {
+    list-style-type:none;
+  button{
+    position: relative;
+    margin:.3rem 0;
+    padding:0.2rem 2rem;
+    border-radius:2rem;
+    background-color:$fond-gris;
+    border:none;
+    box-shadow:2px 2px 2px 0.2px rgb(231, 231, 231);
+
+   button:hover{
+    background-color:#ebbbdd;
+  }
+    .btn_items{
+      display:flex;
+      align-items:center;
+      padding-left:0;
+    
+      span{
+        position:absolute;
+        left:-5px;
+        width:2rem;
+        height:2rem;
+        @include flex-center;
+        background-color:$couleur-Primaiere;
+        border-radius:50%;
+        color:white;
+      }
+      .icon_text{
+        display:flex;
+        align-items:center;
+        margin-left:.2rem;
+        padding:0 2rem;
+
+        .fas{
+          color:gray;
+        }
+      p{
+        padding-left:1rem;
+       font:600 1rem 'Roboto', sans-serif;
+       color:rgb(58, 57, 57);
+      }
+     }
+    }
+  }
+  }
+  }  
+ }
+main{ 
+ background-color:rgb(238, 237, 237);
+.section_cartes{
+  
+  .header_cartes_titre {
+    @include h1-index;
+    height:100%;
+    margin:0;
+    padding:0px 0 0 10px;
+  }
+.carte_conteneur {
+  text-align:center;
+  
+  }
+ .carte{
+   position: relative;
+   width:100%;
+  
+  background-color:white;
+  margin:20px 0;
+  border-radius:12px;
+  box-shadow:2px 2px 2px 0.9px white;
+
+  button{
+      background-color:$couleur-Tertiaire;
+      font:600 1rem 'Roboto', sans-serif;
+      position:absolute;
+      top:10px;
+      right:10px;
+      padding:0 20px;
+      border:none;
+
+    p{
+      margin:5px 0;
+      color:#0e8d6d;
+    }
+    }
+  img {
+    width:300px;
+    width:100%;
+    height:200px;
+    object-fit: cover;
+    border-radius:12px 12px 0 0;
+ }
+ h3{
+  @include section-h3;
+  margin:5px;
+  padding-left:10px;
+ }
+ p{
+   @include section-p;
+   margin-top:2px;
+   padding-left:12px;
+ }
+ .far{
+   color:rgb(27, 25, 25);
+   position:absolute;
+   bottom:15px;
+   right:25px;
+   font-size:25px;
+
+  &:hover{
+    background-color: rgb(128, 62, 0);
+  }
+ }
+  }
+ }
+
+footer{
+  background-color:rgb(56, 56, 56);
+  height:180px;
+  margin-top:40px;
+  .footer_items{
+    margin:15px 10px;
+    .footer_logo{
+      font-family:$police-logo-titre;
+      font-size:25px;
+       color:rgb(236, 234, 234);
+       margin:2px;
+      
+    }
+    .footer_propo{
+      @include flex-center2;
+      color: rgb(219, 219, 219);
+    }
+    .footer_partneur{
+      @include flex-center2;
+      color: rgb(219, 219, 219);
+    }
+  
+  p{
+    @include section-h3;
+    font-size:16px;
+    padding:0 10px;
+    margin:5px;
+    
+  } 
+  .mention_légal{
+    padding:10px 0;
+    a{
+    @include section-h3;
+    font-size:16px;
+    padding:0;
+    color:rgb(219, 219, 219);
+  }
+ 
+  }
+  .contact{
+      @include section-h3;
+      font-size:16px;
+      padding:0 ;
+      color:rgb(219, 219, 219);
+  }
+  }
+}
+
+}
+
+ }

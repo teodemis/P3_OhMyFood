@@ -1,0 +1,332 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  max-width: 1500px;
+}
+
+body header {
+  width: 100%;
+}
+
+body header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 40px;
+  margin-left: auto;
+}
+
+body header .header_conteneur {
+  display: block;
+  width: 100%;
+  height: 350px;
+  background-color: whitesmoke;
+}
+
+body header .header_conteneur .header_location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  border-top: 3px #d6d5d5 solid;
+}
+
+body header .header_conteneur .header_location .paris_location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+}
+
+body header .header_conteneur .header_location .paris_location .header_loction_paragraph {
+  padding-left: .6rem;
+  font: bolder 1rem 'Roboto', sans-serif;
+  color: #4b4848;
+}
+
+body header .header_conteneur .header_location .paris_location .icon_location {
+  color: #2e2d2d;
+  font-size: 15px;
+}
+
+body header .header_conteneur .header_contneur_contenu {
+  text-align: center;
+}
+
+body header .header_conteneur .header_contneur_contenu .titre_contenue {
+  font-size: 24px;
+  font-weight: bold 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+body header .header_conteneur .header_contneur_contenu .paragraph_contenu {
+  font: 500 1.2rem "Roboto", sans-serif;
+  color: gray;
+}
+
+body header .header_conteneur .header_contneur_contenu button {
+  border-radius: 2rem;
+  border: none;
+  background-color: #FF79DA;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: #f3f3f3;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 0 2rem;
+}
+
+body .section_buttons {
+  text-align: center;
+}
+
+body .section_buttons .titre_buttons {
+  font-size: 24px;
+  font-weight: bold 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+body .section_buttons .buttons_dechoix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+}
+
+body .section_buttons .buttons_dechoix li {
+  list-style-type: none;
+}
+
+body .section_buttons .buttons_dechoix li button {
+  position: relative;
+  margin: .3rem 0;
+  padding: 0.2rem 2rem;
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  border: none;
+  -webkit-box-shadow: 2px 2px 2px 0.2px #e7e7e7;
+          box-shadow: 2px 2px 2px 0.2px #e7e7e7;
+}
+
+body .section_buttons .buttons_dechoix li button button:hover {
+  background-color: #ebbbdd;
+}
+
+body .section_buttons .buttons_dechoix li button .btn_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+body .section_buttons .buttons_dechoix li button .btn_items span {
+  position: absolute;
+  left: -5px;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: white;
+}
+
+body .section_buttons .buttons_dechoix li button .btn_items .icon_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: .2rem;
+  padding: 0 2rem;
+}
+
+body .section_buttons .buttons_dechoix li button .btn_items .icon_text .fas {
+  color: gray;
+}
+
+body .section_buttons .buttons_dechoix li button .btn_items .icon_text p {
+  padding-left: 1rem;
+  font: 600 1rem 'Roboto', sans-serif;
+  color: #3a3939;
+}
+
+body main {
+  background-color: #eeeded;
+}
+
+body main .section_cartes .header_cartes_titre {
+  font-size: 24px;
+  font-weight: bold 700;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0px 0 0 10px;
+}
+
+body main .section_cartes .carte_conteneur {
+  text-align: center;
+}
+
+body main .section_cartes .carte {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  margin: 20px 0;
+  border-radius: 12px;
+  -webkit-box-shadow: 2px 2px 2px 0.9px white;
+          box-shadow: 2px 2px 2px 0.9px white;
+}
+
+body main .section_cartes .carte button {
+  background-color: #99E2D0;
+  font: 600 1rem 'Roboto', sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0 20px;
+  border: none;
+}
+
+body main .section_cartes .carte button p {
+  margin: 5px 0;
+  color: #0e8d6d;
+}
+
+body main .section_cartes .carte img {
+  width: 300px;
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+body main .section_cartes .carte h3 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  margin: 5px;
+  padding-left: 10px;
+}
+
+body main .section_cartes .carte p {
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin-top: 2px;
+  padding-left: 12px;
+}
+
+body main .section_cartes .carte .far {
+  color: #1b1919;
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 25px;
+}
+
+body main .section_cartes .carte .far:hover {
+  background-color: #803e00;
+}
+
+body main footer {
+  background-color: #383838;
+  height: 180px;
+  margin-top: 40px;
+}
+
+body main footer .footer_items {
+  margin: 15px 10px;
+}
+
+body main footer .footer_items .footer_logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  color: #eceaea;
+  margin: 2px;
+}
+
+body main footer .footer_items .footer_propo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #dbdbdb;
+}
+
+body main footer .footer_items .footer_partneur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #dbdbdb;
+}
+
+body main footer .footer_items p {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 5px;
+}
+
+body main footer .footer_items .mention_légal {
+  padding: 10px 0;
+}
+
+body main footer .footer_items .mention_légal a {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 0;
+  color: #dbdbdb;
+}
+
+body main footer .footer_items .contact {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 0;
+  color: #dbdbdb;
+}
+/*# sourceMappingURL=style.css.map */
