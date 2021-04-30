@@ -7,6 +7,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1500px;
+  min-width: 100px;
 }
 
 body header {
@@ -29,7 +30,7 @@ body header .header_conteneur {
   display: block;
   width: 100%;
   height: 350px;
-  background-color: whitesmoke;
+  background-color: #f2f2f2;
 }
 
 body header .header_conteneur .header_location {
@@ -41,6 +42,7 @@ body header .header_conteneur .header_location {
           justify-content: center;
   width: 100%;
   height: 50px;
+  background-color: #e7e7e7;
   border-top: 3px #d6d5d5 solid;
 }
 
@@ -54,7 +56,7 @@ body header .header_conteneur .header_location .paris_location {
   padding: 0.5rem;
 }
 
-body header .header_conteneur .header_location .paris_location .header_loction_paragraph {
+body header .header_conteneur .header_location .paris_location .header_loction_titre {
   padding-left: .6rem;
   font: bolder 1rem 'Roboto', sans-serif;
   color: #4b4848;
@@ -91,16 +93,26 @@ body header .header_conteneur .header_contneur_contenu button {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   padding: 0 2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+body header .header_conteneur .header_contneur_contenu button:hover {
+  background-color: #28ee32;
+  color: white;
 }
 
 body .section_buttons {
   text-align: center;
+  margin-top: 50px;
 }
 
 body .section_buttons .titre_buttons {
   font-size: 24px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
+  padding-right: 9rem;
+  margin-bottom: 0;
 }
 
 body .section_buttons .buttons_dechoix {
@@ -112,6 +124,7 @@ body .section_buttons .buttons_dechoix {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 0;
+  margin-top: 5px;
 }
 
 body .section_buttons .buttons_dechoix li {
@@ -120,20 +133,25 @@ body .section_buttons .buttons_dechoix li {
 
 body .section_buttons .buttons_dechoix li button {
   position: relative;
-  margin: .3rem 0;
-  padding: 0.2rem 2rem;
-  border-radius: 2rem;
-  background-color: whitesmoke;
+  width: 90%;
+  margin: .9rem 0;
+  padding: 0.3rem 2rem;
+  border-radius: 1rem;
+  background-color: #f2f2f2;
   border: none;
-  -webkit-box-shadow: 2px 2px 2px 0.2px #e7e7e7;
-          box-shadow: 2px 2px 2px 0.2px #e7e7e7;
+  -webkit-box-shadow: 2px 2px 2px 0.2px #e0e0e0;
+          box-shadow: 2px 2px 2px 0.2px #e0e0e0;
 }
 
-body .section_buttons .buttons_dechoix li button button:hover {
-  background-color: #ebbbdd;
+body .section_buttons .buttons_dechoix li button:hover {
+  background-color: #f4ebff;
 }
 
 body .section_buttons .buttons_dechoix li button .btn_items {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +163,8 @@ body .section_buttons .buttons_dechoix li button .btn_items {
 
 body .section_buttons .buttons_dechoix li button .btn_items span {
   position: absolute;
-  left: -5px;
+  left: -15px;
+  top: 15px;
   width: 2rem;
   height: 2rem;
   display: -webkit-box;
@@ -169,64 +188,66 @@ body .section_buttons .buttons_dechoix li button .btn_items .icon_text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: .2rem;
-  padding: 0 2rem;
+  padding-left: 1rem;
+  text-align: center;
 }
 
 body .section_buttons .buttons_dechoix li button .btn_items .icon_text .fas {
   color: gray;
+  padding-right: 10px;
 }
 
-body .section_buttons .buttons_dechoix li button .btn_items .icon_text p {
+body .section_buttons .buttons_dechoix li button .btn_items p {
   padding-left: 1rem;
   font: 600 1rem 'Roboto', sans-serif;
   color: #3a3939;
 }
 
-body main {
-  background-color: #eeeded;
+main {
+  background-color: #f2f2f2;
 }
 
-body main .section_cartes .header_cartes_titre {
+main .section_cartes {
+  background-color: #f2f2f2;
+  height: 100%;
+  margin-top: 50px;
+}
+
+main .section_cartes .header_cartes_titre {
   font-size: 24px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0;
-  padding: 0px 0 0 10px;
+  padding: 20px 0 0 15px;
 }
 
-body main .section_cartes .carte_conteneur {
-  text-align: center;
+main .section_cartes .cartes_conteneur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body main .section_cartes .carte {
+main .section_cartes .cartes_conteneur .carte {
   position: relative;
-  width: 100%;
+  width: 95%;
   background-color: white;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
   border-radius: 12px;
   -webkit-box-shadow: 2px 2px 2px 0.9px white;
           box-shadow: 2px 2px 2px 0.9px white;
 }
 
-body main .section_cartes .carte button {
-  background-color: #99E2D0;
-  font: 600 1rem 'Roboto', sans-serif;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 0 20px;
-  border: none;
-}
-
-body main .section_cartes .carte button p {
-  margin: 5px 0;
-  color: #0e8d6d;
-}
-
-body main .section_cartes .carte img {
-  width: 300px;
+main .section_cartes .cartes_conteneur .carte .carte_img img {
+  min-width: 150px;
+  max-width: 100%;
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
@@ -234,15 +255,30 @@ body main .section_cartes .carte img {
   border-radius: 12px 12px 0 0;
 }
 
-body main .section_cartes .carte h3 {
-  font-size: 18px;
+main .section_cartes .cartes_conteneur .carte .carte_img button {
+  background-color: #99E2D0;
+  font: bold 1rem 'Roboto', sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0 20px;
+  border: none;
+}
+
+main .section_cartes .cartes_conteneur .carte .carte_img button p {
+  margin: 5px 0;
+  color: #0e8d6d;
+}
+
+main .section_cartes .cartes_conteneur .carte .carte_footer_items h3 {
+  font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   margin: 5px;
   padding-left: 10px;
 }
 
-body main .section_cartes .carte p {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -250,36 +286,33 @@ body main .section_cartes .carte p {
   padding-left: 12px;
 }
 
-body main .section_cartes .carte .far {
-  color: #1b1919;
+main .section_cartes .cartes_conteneur .carte .carte_footer_items .far {
+  color: #3f3e3e;
   position: absolute;
   bottom: 15px;
   right: 25px;
   font-size: 25px;
 }
 
-body main .section_cartes .carte .far:hover {
-  background-color: #803e00;
-}
-
-body main footer {
+main footer {
   background-color: #383838;
-  height: 180px;
+  height: 100%;
   margin-top: 40px;
 }
 
-body main footer .footer_items {
+main footer .footer_items {
   margin: 15px 10px;
+  padding: 20px;
 }
 
-body main footer .footer_items .footer_logo {
+main footer .footer_items .footer_logo {
   font-family: "Shrikhand", cursive;
   font-size: 25px;
   color: #eceaea;
   margin: 2px;
 }
 
-body main footer .footer_items .footer_propo {
+main footer .footer_items .footer_propo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,18 +322,18 @@ body main footer .footer_items .footer_propo {
   color: #dbdbdb;
 }
 
-body main footer .footer_items .footer_partneur {
+main footer .footer_items .footer_partneur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #dbdbdb;
+  color: #ececec;
 }
 
-body main footer .footer_items p {
-  font-size: 18px;
+main footer .footer_items p {
+  font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -308,12 +341,12 @@ body main footer .footer_items p {
   margin: 5px;
 }
 
-body main footer .footer_items .mention_légal {
+main footer .footer_items .mention_légal {
   padding: 10px 0;
 }
 
-body main footer .footer_items .mention_légal a {
-  font-size: 18px;
+main footer .footer_items .mention_légal a {
+  font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -321,12 +354,17 @@ body main footer .footer_items .mention_légal a {
   color: #dbdbdb;
 }
 
-body main footer .footer_items .contact {
-  font-size: 18px;
+main footer .footer_items .contact {
+  font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   padding: 0;
   color: #dbdbdb;
+  padding-bottom: 20px;
+}
+
+main footer .footer_items .contact a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,8 +2,15 @@
 $couleur-Primaiere: #9356DC;
 $couleur-Secondaire:#FF79DA;
 $couleur-Tertiaire:#99E2D0;
-$fond-gris:hsl(0, 0%, 96%);
+$fond-gris:hsl(0, 0%, 95%);
 $text-footer:#FFFFFf;
+$font-weights:(
+   "thin": 300,
+   "regular":400,
+   "medium":500,
+   "bold" :600,
+   "bolder":700,
+);
 
 // polices//
 $police-logo-titre:'Shrikhand', cursive;
@@ -12,10 +19,15 @@ $section-h3:'30px';
 $section-p:'20px';
 
 
-
+// mixin
 @mixin section-h3 {
-  font-size:18px;
+  font-size:20px;
   font-weight:600;
+  font-family:'Roboto', sans-serif;
+}
+@mixin section-h2 {
+  font-size:20px;
+  font-weight:bold;
   font-family:'Roboto', sans-serif;
 }
 @mixin h1-index {
@@ -29,6 +41,11 @@ $section-p:'20px';
     font-family:'Roboto', sans-serif;
     font-size:18px;
 }
+@mixin section-menu-p{
+  font-weight:500;
+  font-family:'Roboto', sans-serif;
+  font-size:15px;
+}
 
   
 @mixin buttons {
@@ -38,14 +55,14 @@ $section-p:'20px';
   background-image: linear-gradient(to bottom, $couleur-Secondaire,$couleur-Primaiere);
   color:rgb(243, 243, 243);
 }
-  @mixin flex-center{
+  @mixin flexCenter{
     display:flex;
-      justify-content: center;
-      align-items:center;
+    justify-content: center;
+    align-items:center;
   }
-@mixin flex-center2 {
+@mixin flexCenter2 {
   display:flex;
-      align-items:center;
+  align-items:center;
 }
 
     

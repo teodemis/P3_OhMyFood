@@ -1,5 +1,6 @@
 @import 'config';
 
+
 body{
   padding:0;
   margin:0;
@@ -7,6 +8,8 @@ body{
   height:100%;
   width:100%;
   max-width:1500px;
+  min-width:100px;
+ 
  
 header{
     width:100%;
@@ -14,9 +17,9 @@ header{
 .logo {
   display:flex;
   justify-content: center;
-    font-family:$police-logo-titre;
-    font-size:40px;
-    margin-left:auto;
+  font-family:$police-logo-titre;
+   font-size:40px;
+  margin-left:auto;
     
  }
 
@@ -31,14 +34,14 @@ header{
       justify-content: center;
       width:100%;
       height:50px;
+      background-color:rgb(231, 231, 231);
       border-top:3px rgb(214, 213, 213) solid;
    
  .paris_location {
-     display:flex;
-     align-items:center;
+     @include flexCenter2;
      padding:0.5rem;
 
-.header_loction_paragraph{
+.header_loction_titre{
      padding-left:.6rem;
      font:bolder 1rem 'Roboto', sans-serif;
      color:rgb(75, 72, 72);
@@ -65,7 +68,13 @@ header{
    @include buttons;
    @include section-p;
    padding:0 2rem;
-
+   cursor: pointer;
+   font-weight:map-get($font-weights,bold );
+   &:hover{
+     background-color:#28ee32;
+     color:white;
+     
+   }
   }
 }
 }
@@ -73,55 +82,65 @@ header{
 
 
 // section
+
+ 
   .section_buttons{
    text-align:center;
+   margin-top:50px;
     
   .titre_buttons{
       @include h1-index;
+      padding-right:9rem;
+      margin-bottom:0;
     }
 
   .buttons_dechoix{
     display:flex;
     flex-direction:column;
      padding-left:0;
+     margin-top:5px;
 
   li {
     list-style-type:none;
   button{
     position: relative;
-    margin:.3rem 0;
-    padding:0.2rem 2rem;
-    border-radius:2rem;
+    width:90%;
+    margin:.9rem 0;
+   padding:0.3rem 2rem;
+    border-radius:1rem;
     background-color:$fond-gris;
     border:none;
-    box-shadow:2px 2px 2px 0.2px rgb(231, 231, 231);
+    box-shadow:2px 2px 2px 0.2px rgb(224, 224, 224);
+ &:hover{
+    background-color:#f4ebff;
 
-   button:hover{
-    background-color:#ebbbdd;
   }
-    .btn_items{
-      display:flex;
-      align-items:center;
+  .btn_items{
+      flex-direction:column;
+      @include flexCenter2;
       padding-left:0;
     
       span{
         position:absolute;
-        left:-5px;
+        left:-15px;
+        top:15px;
         width:2rem;
         height:2rem;
-        @include flex-center;
+        @include flexCenter;
         background-color:$couleur-Primaiere;
         border-radius:50%;
         color:white;
       }
-      .icon_text{
-        display:flex;
-        align-items:center;
-        margin-left:.2rem;
-        padding:0 2rem;
+  .icon_text{
+      @include flexCenter2;
+        padding-left:1rem;
+        text-align:center;
 
-        .fas{
+    .fas{
           color:gray;
+          padding-right:10px;
+        
+        }
         }
       p{
         padding-left:1rem;
@@ -134,80 +153,91 @@ header{
   }
   }  
  }
-main{ 
- background-color:rgb(238, 237, 237);
-.section_cartes{
+  main{
+    background-color:$fond-gris;
   
-  .header_cartes_titre {
+ .section_cartes{
+   background-color:$fond-gris;
+   height:100%;
+   margin-top:50px;
+  .header_cartes_titre{
     @include h1-index;
-    height:100%;
-    margin:0;
-    padding:0px 0 0 10px;
+      height:100%;
+      margin:0;
+      padding:20px 0 0 15px;
   }
-.carte_conteneur {
-  text-align:center;
-  
-  }
- .carte{
-   position: relative;
-   width:100%;
-  
-  background-color:white;
-  margin:20px 0;
-  border-radius:12px;
-  box-shadow:2px 2px 2px 0.9px white;
-
-  button{
+  .cartes_conteneur{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .carte{
+          position: relative;
+          width:95%;
+         background-color:rgb(255, 255, 255);
+         margin:20px 0 10px 0;
+         border-radius:12px;
+         box-shadow:2px 2px 2px 0.9px white;
+    .carte_img{
+      img{
+     min-width:150px;
+     max-width:100%;
+      width:100%;
+      height:200px;
+      object-fit: cover;
+      border-radius:12px 12px 0 0
+      }
+      button {
       background-color:$couleur-Tertiaire;
-      font:600 1rem 'Roboto', sans-serif;
+      font:bold 1rem 'Roboto', sans-serif;
       position:absolute;
       top:10px;
       right:10px;
       padding:0 20px;
       border:none;
 
-    p{
+      p{
       margin:5px 0;
       color:#0e8d6d;
-    }
-    }
-  img {
-    width:300px;
-    width:100%;
-    height:200px;
-    object-fit: cover;
-    border-radius:12px 12px 0 0;
- }
- h3{
-  @include section-h3;
-  margin:5px;
-  padding-left:10px;
- }
- p{
-   @include section-p;
-   margin-top:2px;
-   padding-left:12px;
- }
- .far{
-   color:rgb(27, 25, 25);
-   position:absolute;
-   bottom:15px;
-   right:25px;
-   font-size:25px;
+        }
 
-  &:hover{
-    background-color: rgb(128, 62, 0);
+    }
   }
- }
+  .carte_footer_items{
+    h3{
+      @include section-h3;
+      margin:5px;
+      padding-left:10px;
   }
- }
+
+  p{
+    @include section-p;
+       margin-top:2px;
+       padding-left:12px;
+  }
+  .far{
+    color:rgb(63, 62, 62);
+    position:absolute;
+    bottom:15px;
+    right:25px;
+    font-size:25px;
+  }
+}
+
+
+
+}
+}
+  }
+    
+  
 
 footer{
   background-color:rgb(56, 56, 56);
-  height:180px;
+  height:100%;
   margin-top:40px;
   .footer_items{
     margin:15px 10px;
+    padding:20px;
     .footer_logo{
       font-family:$police-logo-titre;
       font-size:25px;
@@ -216,12 +246,12 @@ footer{
       
     }
     .footer_propo{
-      @include flex-center2;
+      @include flexCenter2;
       color: rgb(219, 219, 219);
     }
     .footer_partneur{
-      @include flex-center2;
-      color: rgb(219, 219, 219);
+      @include flexCenter2;
+      color: rgb(236, 236, 236);
     }
   
   p{
@@ -246,10 +276,17 @@ footer{
       font-size:16px;
       padding:0 ;
       color:rgb(219, 219, 219);
+      padding-bottom:20px;
+    
+      a{
+        color:white;
+      }
   }
   }
 }
 
 }
 
- }
+ 
+
+ 
