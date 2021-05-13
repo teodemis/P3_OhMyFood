@@ -7,9 +7,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1500px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  min-width: 300px;
   background-color: #f2f2f2;
 }
 
@@ -91,18 +89,6 @@ body main .menu_contneur .titres_icon .titre_header {
   padding-left: 20px;
 }
 
-@media (min-width: 700px) {
-  body main .menu_contneur .titres_icon .titre_header {
-    padding-left: 50px;
-  }
-}
-
-@media (min-width: 1024px) {
-  body main .menu_contneur .titres_icon .titre_header {
-    padding-left: 60px;
-  }
-}
-
 body main .menu_contneur .titres_icon .coeurs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,7 +141,7 @@ body main .menu_contneur .titres_icon .coeurs .coeur1:hover + .coeur2 {
   }
 }
 
-body main .menu_contneur .menu_entrée .entrée-titre {
+body main .menu_contneur .menu_entrée .entrée_titre {
   padding-left: 25px;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
@@ -165,18 +151,18 @@ body main .menu_contneur .menu_entrée .entrée-titre {
 }
 
 @media (min-width: 700px) {
-  body main .menu_contneur .menu_entrée .entrée-titre {
+  body main .menu_contneur .menu_entrée .entrée_titre {
     padding-left: 50px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .menu_contneur .menu_entrée .entrée-titre {
+  body main .menu_contneur .menu_entrée .entrée_titre {
     padding-left: 10px;
   }
 }
 
-body main .menu_contneur .menu_entrée .entrée-titre::after {
+body main .menu_contneur .menu_entrée .entrée_titre::after {
   display: block;
   position: relative;
   content: "";
@@ -810,7 +796,7 @@ body footer .footer_items .footerparagraph_icons p {
 }
 
 body footer .footer_items .footerparagraph_icons .mention_legal {
-  padding: 13px;
+  padding: 15px;
 }
 
 @media (min-width: 700px) {
@@ -840,7 +826,7 @@ body footer .footer_items .footerparagraph_icons .contact {
 
 @media (min-width: 700px) {
   body footer .footer_items .footerparagraph_icons .contact {
-    padding: 10px 0 0 40px;
+    padding: 15px 0 0 40px;
   }
 }
 
@@ -852,4 +838,4 @@ body footer .footer_items .footerparagraph_icons .contact a {
 body footer .footer_items .footerparagraph_icons .contact a:hover {
   color: #eea4a4;
 }
-/*# sourceMappingURL=menu.css.map */
+/*# sourceMappingURL=menu2.css.map */

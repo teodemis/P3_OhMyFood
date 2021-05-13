@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
+    utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
+    restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OhMyFood</title>
+     <title>OhMyFood</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,100;1,300;1,500&display=swap" rel="stylesheet">
@@ -12,6 +15,13 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <div class="chargementDepage">
+    <div class="pointsderepond">
+       <div class="point1"></div>
+       <div class="point2"></div>
+       <div class="point3"></div>
+   </div>
+  </div>
   <header>
     <div class="logo">Ohmyfood</div>
        <div class="header_conteneur">
@@ -22,9 +32,9 @@
               </div>
           </div>
           <div class="header_contneur_contenu">
-            <h1 class="titre_contenue">Réserverez le menu qui vous convient</h1>
-            <p class="paragraph_contenu">
-                Découvrez des restaurants d'exception,séléctionnés par nos soins.</p>
+             <h1 class="titre_contenue">Réserverez le menu qui vous convient</h1>
+             <p class="paragraph_contenu">
+                Découvrez des restaurants d'exception séléctionnés par nos soins.</p>
             <button><p>Explorer nos restaurants</p></button>
           </div>  
         </div>
@@ -72,57 +82,72 @@
                   <h1 class="header_cartes_titre">Restaurants</h1>
               <div class="cartes_conteneur">
                 <div class="carte">
-                  <div class="carte_img">
-                  <a href="/menu.html"><img src="images/restaurants/lapalletedugoute.jpg" alt="lapalette"></a>
+                    <div class="carte_img">
+                      <a href="menu.html"><img src="images/restaurants/lapalletedugoute.jpg" alt="lapalette"></a>
                       <button>
-                        <p>Nouveau</p>
+                          <p>Nouveau</p>
                           </button>
                     </div>
                        <div class="carte_footer_items">
                           <h3>la palette du goute</h3>
                           <p>Ménilmontant</p>
-                          <a href=""><i class="far fa-heart"></i></a>
+                          <div class="coeurs">                             
+                            <div class="coeur1" ><i class="far fa-heart"></i></div>
+                            <div class="coeur2"><i class="fas fa-heart"></i></div>
+                         </div>
                           </div>
 
                 </div>
                     <div class="carte">
                       <div class="carte_img">
-                       <a href="/menu2.html"><img src="images/restaurants/lenoteenchanté.jpg" alt="lanote"></a>
-                          <button>
+                        <a href="menu2.html"><img src="images/restaurants/lenoteenchanté.jpg" alt="lanote"></a>
+                           <button>
                             <p>Nouveau</p>
-                           </button>
+                            </button>
                       </div>
                           <div class="carte_footer_items">
-                            <h3>Le note enchantée</h3>
+                             <h3>Le note enchantée</h3>
                              <p>Charonne</p>
-                             <a href="#"><i class="far fa-heart"></i></a>
+                             <div class="coeurs">                             
+                              <div class="coeur1" ><i class="far fa-heart"></i></div>
+                              <div class="coeur2"><i class="fas fa-heart"></i></div>
+                           </div>
                           </div>      
                     </div>
                     <div class="carte">
-                        <div class="carte_img">
-                           <a href="/menu3.html"><img src="images/restaurants/àlafrançaise.jpg" alt="à la français"> </a>
+                         <div class="carte_img">
+                           <a href="menu3.html"><img src="images/restaurants/àlafrançaise.jpg" alt="à la français"> </a>
                            <div class="carte_footer_items">
                               <h3>A la française</h3>
                               <p>Cité Rouge</p>
-                              <a href=""><i class="far fa-heart"></i></a>
+                              <div class="coeurs">                             
+                                <div class="coeur1" ><i class="far fa-heart"></i></div>
+                                <div class="coeur2"><i class="fas fa-heart"></i></div>
+                             </div>
                             </div>
                         </div>
                     </div>
                 <div class="carte">
                     <div class="carte_img">
-                       <a href="/menu4.html"><img src="images/restaurants/ledelicedesens.jpg" alt="le delice de sens"></a>              
+                       <a href="menu4.html"><img src="images/restaurants/ledelicedesens.jpg" alt="le delice de sens"></a>              
                          <div class="carte_footer_items">
                            <h3>Le délice de sens</h3>
                            <p>Folie-Méricourt</p>
-                           <a href="#"></a><i class="far fa-heart"></i></a>
+                           <div class="coeurs">                             
+                            <div class="coeur1" ><i class="far fa-heart"></i></div>
+                            <div class="coeur2"><i class="fas fa-heart"></i></div>
+                         </div>
                          </div>
                      </div>
                 </div>
+                <div></div>
+              </div>
         </section>
     <footer>
       <div class="footer_items">
             <h2 class="footer_logo">ohmyfood</h2>
-             <div class="footer_propo">
+            <div class="footerparagraph_icons">
+             <div class="footer_propose">
                 <i class="fas fa-utensils"></i>
                 <p>Proposer un Restaurant</p>
             </div>
@@ -134,12 +159,11 @@
               <a href="#">Mentions légals</a>
             </div>
              <div class="contact">
-                <a href="mailto:demsiet2015@yahoo.com">Contact</a>
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
              </div>
+            </div>
       </div>
-    </footer>          
-    </main>
-
-
+    </footer>  
+  </main>        
 </body>
 </html>

@@ -3,30 +3,37 @@
 
 body{
   padding:0;
-  margin:0;
+  margin:0 auto;
   box-sizing:border-box;
   height:100%;
   width:100%;
   max-width:1500px;
-  min-width:100px;
- 
- 
+  min-width:300px;
+@include ipad{
+  width:100%;
+}
+
+  
 header{
-    width:100%;
+  width:100%;
+  @include ipad{
+    min-width:500px;
+  }
 
 .logo {
   display:flex;
   justify-content: center;
   font-family:$police-logo-titre;
-   font-size:40px;
+   font-size:30px;
   margin-left:auto;
+  padding-top:20px;
     
  }
 
 .header_conteneur{
     display:block;
     width:100%;
-    height:350px;
+    height:330px;
     background-color:$fond-gris;
 
   .header_location{
@@ -45,7 +52,7 @@ header{
      padding-left:.6rem;
      font:bolder 1rem 'Roboto', sans-serif;
      color:rgb(75, 72, 72);
-  
+     
  }
     
  .icon_location{
@@ -59,46 +66,77 @@ header{
 
  .titre_contenue{
     @include h1-index;
+    @include ipad{
+     font-size:25px;
+    }
   }
   .paragraph_contenu{
-  font:500 1.2rem'Roboto', sans-serif;
-  color:gray
+   font:500 1.2rem'Roboto', sans-serif;
+   color:gray;
+  @include ipad{
+    font-size:20px;
+  }
   }
   button{
-   @include buttons;
-   @include section-p;
-   padding:0 2rem;
-   cursor: pointer;
-   font-weight:map-get($font-weights,bold );
-   &:hover{
-     background-color:#28ee32;
-     color:white;
-     
-   }
+    border:none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color:white;
+    border-radius:100px;
+    background-color:rgb(90, 90, 90);
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor:pointer;
+    transition-duration:.5s;
+    margin-top:20px;
+    p{
+       margin:15px;
+    }
+
+    &:hover{
+      background-color:white;
+      box-shadow:7px 7px 7px rgb(141, 138, 138);
+    }
   }
 }
 }
 }
-
-
 // section
 
- 
-  .section_buttons{
+.section_buttons{
    text-align:center;
    margin-top:50px;
     
-  .titre_buttons{
+.titre_buttons{
       @include h1-index;
-      padding-right:9rem;
+      padding-right:7rem;
       margin-bottom:0;
+      @include ipad{
+        display: flex;
+        justify-content:flex-start;
+        padding:10px 50px;
+        font-size:30px;
+      }
+      @include desktop{
+        padding-left:50px;
+      }
+      @include mobile{
+        padding-right:10rem;
+      }
     }
+    
 
-  .buttons_dechoix{
+.buttons_dechoix{
     display:flex;
     flex-direction:column;
      padding-left:0;
      margin-top:5px;
+    @include ipad {
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+      margin-left:40px; 
+    }
 
   li {
     list-style-type:none;
@@ -106,19 +144,41 @@ header{
     position: relative;
     width:90%;
     margin:.9rem 0;
-   padding:0.3rem 2rem;
+    padding:0.3rem 1rem;
     border-radius:1rem;
     background-color:$fond-gris;
     border:none;
     box-shadow:2px 2px 2px 0.2px rgb(224, 224, 224);
- &:hover{
+    cursor: pointer;
+    @include mobile{
+      width:70%;
+      padding-right:45px ;
+    }
+    &:hover{
     background-color:#f4ebff;
-
+    & +.fas{
+      color:red;
+      }
+    
   }
+ 
+
+  @include ipad{
+   margin:10px 45px 10px 20px;
+   padding:0 10px;
+   width:300px;
+   height:90px;
+  }
+
   .btn_items{
+    display:flex;
       flex-direction:column;
-      @include flexCenter2;
       padding-left:0;
+      @include mobile{
+        align-items: center;
+
+      }
+     
     
       span{
         position:absolute;
@@ -130,15 +190,22 @@ header{
         background-color:$couleur-Primaiere;
         border-radius:50%;
         color:white;
+        @include ipad{
+          top:30px;
+        }
       }
   .icon_text{
       @include flexCenter2;
-        padding-left:1rem;
+        padding-left:1.2rem;
         text-align:center;
 
     .fas{
-          color:gray;
+         color:rgb(138, 136, 136);
           padding-right:10px;
+
+        @include ipad{
+          padding-right:0;
+        }
         
         }
         }
@@ -146,45 +213,79 @@ header{
         padding-left:1rem;
        font:600 1rem 'Roboto', sans-serif;
        color:rgb(58, 57, 57);
+       @include ipad{
+         font-size:20px;
+       }
       }
      }
     }
   }
   }
   }  
- }
-  main{
-    background-color:$fond-gris;
-  
+ 
+   main{
+    background-color:$fond-gris;  
  .section_cartes{
    background-color:$fond-gris;
    height:100%;
    margin-top:50px;
+   @include ipad{
+     width:100%;
+     margin-top:0;
+   }
   .header_cartes_titre{
     @include h1-index;
       height:100%;
       margin:0;
       padding:20px 0 0 15px;
+      @include ipad{
+        padding-left:40px;
+        font-size:30px;
+      }
+      @include desktop{
+        padding-left:60px;
+      }
   }
   .cartes_conteneur{
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include ipad{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items:center;
+      
+    }
+   
     .carte{
-          position: relative;
-          width:95%;
+         position: relative;
+         width:95%;
          background-color:rgb(255, 255, 255);
          margin:20px 0 10px 0;
          border-radius:12px;
-         box-shadow:2px 2px 2px 0.9px white;
+         box-shadow:2px 2px  0.9px white;
+
+      @include ipad{
+       display:flex;
+       flex-flow:column wrap;
+       width:45%;
+       margin:10px;
+       box-shadow:3px 3px 0.9px rgb(228, 227, 227);
+      }
+      
     .carte_img{
       img{
      min-width:150px;
-     max-width:100%;
       width:100%;
       height:200px;
       object-fit: cover;
-      border-radius:12px 12px 0 0
+      border-radius:12px 12px 0 0;
+     @include desktop{
+        height:320px;
+     }
+      
       }
       button {
       background-color:$couleur-Tertiaire;
@@ -198,8 +299,8 @@ header{
       p{
       margin:5px 0;
       color:#0e8d6d;
+      
         }
-
     }
   }
   .carte_footer_items{
@@ -213,39 +314,80 @@ header{
     @include section-p;
        margin-top:2px;
        padding-left:12px;
-  }
-  .far{
-    color:rgb(63, 62, 62);
-    position:absolute;
-    bottom:15px;
-    right:25px;
-    font-size:25px;
-  }
-}
+       margin-bottom:7px;
+  } 
+  .coeurs{
+      display:flex;
+      position:absolute;
+      bottom:20px;
+      right:20px;
+    .coeur1{
+      font-size: 25px;
+      transform:translateX(24px);
+       z-index:1;
+      font-size:24px;
+      color:rgb(133, 131, 131);
+    }
+    .coeur2{
+      transform: scale(0.9);
+      background: -webkit-linear-gradient( 175deg, #FF79DA 10%, #9356DC 95%);
+      -webkit-background-clip:text;
+       -webkit-text-fill-color: transparent;
+       font-size:24px;
+       opacity:0;
+       transition:.3s linear;
+       cursor: pointer;
+    }
+     .coeur1:hover + .coeur2{
+       opacity:0.9;
+       transform: scale(1);
+       z-index:2;
+       cursor: pointer;
 
-
-
-}
-}
-  }
+      
+     
+     }
     
-  
+  }
+  }
 
+  } 
+}
+}
+
+  }
 footer{
   background-color:rgb(56, 56, 56);
   height:100%;
-  margin-top:40px;
+  margin:20px 0;
+ 
   .footer_items{
-    margin:15px 10px;
+    margin:0 10px;
     padding:20px;
-    .footer_logo{
-      font-family:$police-logo-titre;
-      font-size:25px;
-       color:rgb(236, 234, 234);
-       margin:2px;
-      
+    
     }
-    .footer_propo{
+    .footer_logo{
+      display:flex;
+      font-family:$police-logo-titre;
+       font-size:20px;
+      margin-bottom:0;
+      color:white;
+       @include ipad{
+         display:flex;
+         justify-content:center;
+       }
+    }
+    .footerparagraph_icons{
+      @include ipad{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+      }
+      div{
+        padding:0 10px;
+      }
+    
+    .footer_propose{
       @include flexCenter2;
       color: rgb(219, 219, 219);
     }
@@ -256,37 +398,44 @@ footer{
   
   p{
     @include section-h3;
-    font-size:16px;
+    font-size:12px;
     padding:0 10px;
     margin:5px;
     
   } 
   .mention_légal{
     padding:10px 0;
+    @include ipad{
+      padding-top:20px 0 0 20px;
+    }
     a{
     @include section-h3;
-    font-size:16px;
+    font-size:12px;
     padding:0;
     color:rgb(219, 219, 219);
+    text-decoration:none;
   }
  
   }
   .contact{
       @include section-h3;
-      font-size:16px;
+      font-size:12px;
       padding:0 ;
       color:rgb(219, 219, 219);
       padding-bottom:20px;
+      @include ipad{
+        padding:10px 0 0 60px;
+      }
     
       a{
         color:white;
+        text-decoration:none;
       }
   }
   }
 }
-
 }
 
- 
+
 
  

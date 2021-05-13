@@ -1,6 +1,4 @@
-
 @import 'config';
-
 body{
     padding:0;
     margin:0 auto;
@@ -8,8 +6,9 @@ body{
     height:100%;
     width:100%;
     max-width:1500px;
-    min-width:fit-content;
-    background-color:$fond-gris;
+    min-width:300px;
+    background-color:red;
+    
  
   header{ 
     .header_items{
@@ -55,8 +54,7 @@ body{
      background-color:$fond-gris;
     transform: translateY(-50px);
     border-radius:40px 40px 0 0;
-   .menu_contneur {
-    
+   .menu_contneur { 
      .titres_icon {
        @include flexCenter2;
        justify-content: space-between;
@@ -64,11 +62,9 @@ body{
          font-family:$police-logo-titre;
           font-size:27px;
           padding-left:20px;
-          @include ipad{
-            padding-left:50px;
-          }
           @include desktop{
-            padding-left:60px;
+            padding-left:50px;
+            margin-bottom:0;
           }
       }
       .coeurs{
@@ -111,20 +107,12 @@ body{
 
 
      .menu_entrée{
-      .entrée-titre {
+      .entrée_titre {
         padding-left:25px;
         @include section-p;
-        width:75px;
-        padding-bottom:5px;
-        @include ipad{
-          padding-left:50px;
-        }
-        @include desktop{
-          padding-left:10px;
-        }
         
        }
-      .entrée-titre::after{
+      .entrée_titre::after{
         display: block;
         position: relative;
         content: "";
@@ -150,7 +138,6 @@ body{
        overflow: hidden;
        padding-left: 10px;
        animation:menu .9s linear ;
-       transform-origin:top;
        @include desktop{
        width:300px;
       }
@@ -158,6 +145,7 @@ body{
          0%{
            transform: translateY(-40px);
            opacity:0.1;
+           transform-origin:top;
    
          }
          100%{
@@ -178,7 +166,6 @@ body{
         h2{
           @include section-h2;
           margin:0 0 5px 0;
-          
         }
         p{
           @include section-menu-p;
@@ -506,8 +493,6 @@ body{
 
 footer{
   background-color:rgb(56, 56, 56);
-  height:100%;
-  margin:20px 0;
   .footer_items{
     margin: 0px;
     padding:10px;
@@ -554,7 +539,7 @@ footer{
     
   } 
   .mention_legal{
-    padding:13px;
+    padding:15px;
     @include ipad{
       padding-top:20px 0 0 20;
     }
@@ -575,20 +560,20 @@ footer{
     color:rgb(219, 219, 219);
     padding-bottom:20px;
     @include ipad{
-      padding:10px 0 0 40px;
+      padding:15px 0 0 40px;
     }
          a{
         color:white;
         text-decoration: none;
         &:hover{
-          color:rgb(238, 164, 164);
+          color: rgb(238, 164, 164);
         }
       }
-    
   }
 }
 }
 
 }
+
 
 }
