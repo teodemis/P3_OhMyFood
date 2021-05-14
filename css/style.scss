@@ -1,5 +1,5 @@
 @import 'config';
-
+@import  'chargementDePage';
 
 body{
   padding:0;
@@ -262,7 +262,11 @@ header{
          background-color:rgb(255, 255, 255);
          margin:20px 0 10px 0;
          border-radius:12px;
-         box-shadow:2px 2px  0.9px white;
+         box-shadow:2px 2px 2px 2px rgb(196, 196, 196);
+         &:hover{
+           box-shadow:2px 2px 2px 2px rgb(196, 196, 196);
+           background-color:rgb(236, 236, 236);
+         }
 
       @include ipad{
        display:flex;
