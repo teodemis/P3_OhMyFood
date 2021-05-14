@@ -29,7 +29,7 @@ body header .header_items .fas {
   font-size: 20px;
 }
 
-body header .logo {
+body header h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +39,7 @@ body header .logo {
 }
 
 @media (min-width: 700px) {
-  body header .logo {
+  body header h1 {
     font-size: 35px;
   }
 }
@@ -83,10 +83,16 @@ body main .menu_contneur .titres_icon {
           justify-content: space-between;
 }
 
-body main .menu_contneur .titres_icon .titre_header {
+body main .menu_contneur .titres_icon h1 {
   font-family: "Shrikhand", cursive;
   font-size: 27px;
   padding-left: 20px;
+}
+
+@media (min-width: 700px) {
+  body main .menu_contneur .titres_icon h1 {
+    padding-left: 50px;
+  }
 }
 
 body main .menu_contneur .titres_icon .coeurs {
@@ -704,10 +710,15 @@ body main .btn_commande {
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
   margin-top: 40px;
+  padding: 10px 35px;
+  font-size: 13px;
 }
 
-body main .btn_commande p {
-  margin: 15px;
+@media (min-width: 1024px) {
+  body main .btn_commande {
+    padding: 15px 45px;
+    font-size: 15px;
+  }
 }
 
 body main .btn_commande:hover {
@@ -727,7 +738,7 @@ body footer .footer_items {
   padding: 10px;
 }
 
-body footer .footer_items .footer_logo {
+body footer .footer_items h2 {
   font-family: "Shrikhand", cursive;
   font-size: 23px;
   padding-left: 5px;
@@ -736,7 +747,7 @@ body footer .footer_items .footer_logo {
 }
 
 @media (min-width: 700px) {
-  body footer .footer_items .footer_logo {
+  body footer .footer_items h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

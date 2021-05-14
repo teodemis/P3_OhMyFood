@@ -29,17 +29,17 @@ body header .header_items .fas {
   font-size: 20px;
 }
 
-body header .logo {
+body header h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: "Shrikhand", cursive;
-  font-size: 30px;
+  font-size: 20px;
   margin: 0 auto;
 }
 
 @media (min-width: 700px) {
-  body header .logo {
+  body header h1 {
     font-size: 35px;
   }
 }
@@ -83,10 +83,16 @@ body main .menu_contneur .titres_icon {
           justify-content: space-between;
 }
 
-body main .menu_contneur .titres_icon .titre_header {
+body main .menu_contneur .titres_icon h1 {
   font-family: "Shrikhand", cursive;
   font-size: 27px;
   padding-left: 20px;
+}
+
+@media (min-width: 700px) {
+  body main .menu_contneur .titres_icon h1 {
+    padding-left: 50px;
+  }
 }
 
 body main .menu_contneur .titres_icon .coeurs {
@@ -345,7 +351,7 @@ body main .menu_contneur .menu_entrée .menu:hover .slider .fas {
   transition: .5s linear;
 }
 
-body main .menu_plat .plat_titre {
+body main .menu_contneur .menu_plat .plat_titre {
   padding-left: 20px;
   margin: 14px 0 23px 0;
   font-weight: 500;
@@ -354,18 +360,18 @@ body main .menu_plat .plat_titre {
 }
 
 @media (min-width: 700px) {
-  body main .menu_plat .plat_titre {
+  body main .menu_contneur .menu_plat .plat_titre {
     padding-left: 50px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .menu_plat .plat_titre {
+  body main .menu_contneur .menu_plat .plat_titre {
     padding-left: 10px;
   }
 }
 
-body main .menu_plat .plat_titre::after {
+body main .menu_contneur .menu_plat .plat_titre::after {
   display: block;
   position: relative;
   content: "";
@@ -375,7 +381,7 @@ body main .menu_plat .plat_titre::after {
   width: 45px;
 }
 
-body main .menu_plat .menu {
+body main .menu_contneur .menu_plat .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,25 +409,25 @@ body main .menu_plat .menu {
 }
 
 @media (min-width: 1024px) {
-  body main .menu_plat .menu {
+  body main .menu_contneur .menu_plat .menu {
     width: 300px;
   }
 }
 
-body main .menu_plat .menu .menuPlat_titre_icon {
+body main .menu_contneur .menu_plat .menu .menuPlat_titre_icon {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-body main .menu_plat .menu .menuPlat_titre_icon h2 {
+body main .menu_contneur .menu_plat .menu .menuPlat_titre_icon h2 {
   font-size: 15px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   margin: 0 0 5px 0;
 }
 
-body main .menu_plat .menu .menuPlat_titre_icon p {
+body main .menu_contneur .menu_plat .menu .menuPlat_titre_icon p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -429,7 +435,7 @@ body main .menu_plat .menu .menuPlat_titre_icon p {
   text-overflow: ellipsis;
 }
 
-body main .menu_plat .menu span {
+body main .menu_contneur .menu_plat .menu span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,13 +449,13 @@ body main .menu_plat .menu span {
 }
 
 @media (min-width: 1024px) {
-  body main .menu_plat .menu span {
+  body main .menu_contneur .menu_plat .menu span {
     bottom: 25px;
     padding: 10px 0px 0 5px;
   }
 }
 
-body main .menu_plat .menu .fas {
+body main .menu_contneur .menu_plat .menu .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,7 +472,7 @@ body main .menu_plat .menu .fas {
           transform: rotate(180deg);
 }
 
-body main .menu_plat .menu .slider {
+body main .menu_contneur .menu_plat .menu .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,18 +496,18 @@ body main .menu_plat .menu .slider {
 }
 
 @media (min-width: 700px) {
-  body main .menu_plat .menu .slider {
+  body main .menu_contneur .menu_plat .menu .slider {
     width: 10%;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .menu_plat .menu .slider {
+  body main .menu_contneur .menu_plat .menu .slider {
     width: 26%;
   }
 }
 
-body main .menu_plat .menu:hover .slider {
+body main .menu_contneur .menu_plat .menu:hover .slider {
   visibility: visible;
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
@@ -509,14 +515,14 @@ body main .menu_plat .menu:hover .slider {
   visibility: visible;
 }
 
-body main .menu_plat .menu:hover .slider .fas {
+body main .menu_contneur .menu_plat .menu:hover .slider .fas {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: .5s linear;
   transition: .5s linear;
 }
 
-body main .menu_desserts .titre_déssert {
+body main .menu_contneur .menu_desserts .titre_déssert {
   padding-left: 20px;
   margin: 14px 0 23px 0;
   font-weight: 500;
@@ -525,18 +531,18 @@ body main .menu_desserts .titre_déssert {
 }
 
 @media (min-width: 700px) {
-  body main .menu_desserts .titre_déssert {
+  body main .menu_contneur .menu_desserts .titre_déssert {
     padding-left: 50px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .menu_desserts .titre_déssert {
+  body main .menu_contneur .menu_desserts .titre_déssert {
     padding-left: 10px;
   }
 }
 
-body main .menu_desserts .titre_déssert::after {
+body main .menu_contneur .menu_desserts .titre_déssert::after {
   display: block;
   position: relative;
   content: "";
@@ -546,7 +552,7 @@ body main .menu_desserts .titre_déssert::after {
   width: 55px;
 }
 
-body main .menu_desserts .menu {
+body main .menu_contneur .menu_desserts .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,33 +580,33 @@ body main .menu_desserts .menu {
 }
 
 @media (min-width: 1024px) {
-  body main .menu_desserts .menu {
+  body main .menu_contneur .menu_desserts .menu {
     width: 300px;
   }
 }
 
-body main .menu_desserts .menu .menuDesert_titre_icon {
+body main .menu_contneur .menu_desserts .menu .menuDesert_titre_icon {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 10px 0;
 }
 
-body main .menu_desserts .menu .menuDesert_titre_icon h2 {
+body main .menu_contneur .menu_desserts .menu .menuDesert_titre_icon h2 {
   font-size: 15px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   margin: 0 0 5px 0;
 }
 
-body main .menu_desserts .menu .menuDesert_titre_icon p {
+body main .menu_contneur .menu_desserts .menu .menuDesert_titre_icon p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   margin: 0;
 }
 
-body main .menu_desserts .menu span {
+body main .menu_contneur .menu_desserts .menu span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,12 +620,12 @@ body main .menu_desserts .menu span {
 }
 
 @media (min-width: 1024px) {
-  body main .menu_desserts .menu span {
+  body main .menu_contneur .menu_desserts .menu span {
     bottom: 25px;
   }
 }
 
-body main .menu_desserts .menu .fas {
+body main .menu_contneur .menu_desserts .menu .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,7 +642,7 @@ body main .menu_desserts .menu .fas {
           transform: rotate(180deg);
 }
 
-body main .menu_desserts .menu .slider {
+body main .menu_contneur .menu_desserts .menu .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,18 +666,18 @@ body main .menu_desserts .menu .slider {
 }
 
 @media (min-width: 700px) {
-  body main .menu_desserts .menu .slider {
+  body main .menu_contneur .menu_desserts .menu .slider {
     width: 10%;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .menu_desserts .menu .slider {
+  body main .menu_contneur .menu_desserts .menu .slider {
     width: 20%;
   }
 }
 
-body main .menu_desserts .menu:hover .slider {
+body main .menu_contneur .menu_desserts .menu:hover .slider {
   visibility: visible;
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
@@ -679,7 +685,7 @@ body main .menu_desserts .menu:hover .slider {
   visibility: visible;
 }
 
-body main .menu_desserts .menu:hover .slider .fas {
+body main .menu_contneur .menu_desserts .menu:hover .slider .fas {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: .5s linear;
@@ -704,10 +710,15 @@ body main .btn_commande {
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
   margin-top: 40px;
+  padding: 10px 35px;
+  font-size: 13px;
 }
 
-body main .btn_commande p {
-  margin: 15px;
+@media (min-width: 1024px) {
+  body main .btn_commande {
+    padding: 15px 45px;
+    font-size: 15px;
+  }
 }
 
 body main .btn_commande:hover {
@@ -727,7 +738,7 @@ body footer .footer_items {
   padding: 10px;
 }
 
-body footer .footer_items .footer_logo {
+body footer .footer_items h2 {
   font-family: "Shrikhand", cursive;
   font-size: 23px;
   padding-left: 5px;
@@ -736,7 +747,7 @@ body footer .footer_items .footer_logo {
 }
 
 @media (min-width: 700px) {
-  body footer .footer_items .footer_logo {
+  body footer .footer_items h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

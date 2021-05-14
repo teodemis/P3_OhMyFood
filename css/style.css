@@ -120,10 +120,7 @@ body header .header_conteneur .header_contneur_contenu button {
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
   margin-top: 20px;
-}
-
-body header .header_conteneur .header_contneur_contenu button p {
-  margin: 15px;
+  padding: 17px;
 }
 
 body header .header_conteneur .header_contneur_contenu button:hover {
@@ -137,16 +134,16 @@ body .section_buttons {
   margin-top: 50px;
 }
 
-body .section_buttons .titre_buttons {
+body .section_buttons h1 {
   font-size: 24px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
-  padding-right: 7rem;
+  padding-right: 10rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 700px) {
-  body .section_buttons .titre_buttons {
+  body .section_buttons h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -159,13 +156,13 @@ body .section_buttons .titre_buttons {
 }
 
 @media (min-width: 1024px) {
-  body .section_buttons .titre_buttons {
+  body .section_buttons h1 {
     padding-left: 50px;
   }
 }
 
 @media (min-width: 370px) {
-  body .section_buttons .titre_buttons {
+  body .section_buttons h1 {
     padding-right: 10rem;
   }
 }
@@ -178,7 +175,7 @@ body .section_buttons .buttons_dechoix {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 0;
+  padding-left: 25px;
   margin-top: 5px;
 }
 
@@ -204,9 +201,9 @@ body .section_buttons .buttons_dechoix li {
   list-style-type: none;
 }
 
-body .section_buttons .buttons_dechoix li button {
+body .section_buttons .buttons_dechoix li .button {
   position: relative;
-  width: 90%;
+  width: 85%;
   margin: .9rem 0;
   padding: 0.3rem 1rem;
   border-radius: 1rem;
@@ -218,22 +215,22 @@ body .section_buttons .buttons_dechoix li button {
 }
 
 @media (min-width: 370px) {
-  body .section_buttons .buttons_dechoix li button {
+  body .section_buttons .buttons_dechoix li .button {
     width: 70%;
     padding-right: 45px;
   }
 }
 
-body .section_buttons .buttons_dechoix li button:hover {
+body .section_buttons .buttons_dechoix li .button:hover {
   background-color: #f4ebff;
 }
 
-body .section_buttons .buttons_dechoix li button:hover + .fas {
+body .section_buttons .buttons_dechoix li .button:hover + .fas {
   color: red;
 }
 
 @media (min-width: 700px) {
-  body .section_buttons .buttons_dechoix li button {
+  body .section_buttons .buttons_dechoix li .button {
     margin: 10px 45px 10px 20px;
     padding: 0 10px;
     width: 300px;
@@ -241,7 +238,7 @@ body .section_buttons .buttons_dechoix li button:hover + .fas {
   }
 }
 
-body .section_buttons .buttons_dechoix li button .btn_items {
+body .section_buttons .buttons_dechoix li .button .btn_items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,21 +246,21 @@ body .section_buttons .buttons_dechoix li button .btn_items {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 0;
+  padding-top: 12px;
 }
 
 @media (min-width: 370px) {
-  body .section_buttons .buttons_dechoix li button .btn_items {
+  body .section_buttons .buttons_dechoix li .button .btn_items {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-body .section_buttons .buttons_dechoix li button .btn_items span {
+body .section_buttons .buttons_dechoix li .button .btn_items span {
   position: absolute;
   left: -15px;
-  top: 15px;
+  top: 18px;
   width: 2rem;
   height: 2rem;
   display: -webkit-box;
@@ -281,12 +278,12 @@ body .section_buttons .buttons_dechoix li button .btn_items span {
 }
 
 @media (min-width: 700px) {
-  body .section_buttons .buttons_dechoix li button .btn_items span {
+  body .section_buttons .buttons_dechoix li .button .btn_items span {
     top: 30px;
   }
 }
 
-body .section_buttons .buttons_dechoix li button .btn_items .icon_text {
+body .section_buttons .buttons_dechoix li .button .btn_items .icon_text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,25 +294,25 @@ body .section_buttons .buttons_dechoix li button .btn_items .icon_text {
   text-align: center;
 }
 
-body .section_buttons .buttons_dechoix li button .btn_items .icon_text .fas {
+body .section_buttons .buttons_dechoix li .button .btn_items .icon_text .fas {
   color: #8a8888;
   padding-right: 10px;
 }
 
 @media (min-width: 700px) {
-  body .section_buttons .buttons_dechoix li button .btn_items .icon_text .fas {
+  body .section_buttons .buttons_dechoix li .button .btn_items .icon_text .fas {
     padding-right: 0;
   }
 }
 
-body .section_buttons .buttons_dechoix li button .btn_items p {
+body .section_buttons .buttons_dechoix li .button .btn_items p {
   padding-left: 1rem;
   font: 600 1rem 'Roboto', sans-serif;
   color: #3a3939;
 }
 
 @media (min-width: 700px) {
-  body .section_buttons .buttons_dechoix li button .btn_items p {
+  body .section_buttons .buttons_dechoix li .button .btn_items p {
     font-size: 20px;
   }
 }
@@ -337,7 +334,7 @@ body main .section_cartes {
   }
 }
 
-body main .section_cartes .header_cartes_titre {
+body main .section_cartes h1 {
   font-size: 24px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
@@ -347,14 +344,14 @@ body main .section_cartes .header_cartes_titre {
 }
 
 @media (min-width: 700px) {
-  body main .section_cartes .header_cartes_titre {
+  body main .section_cartes h1 {
     padding-left: 40px;
     font-size: 30px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .section_cartes .header_cartes_titre {
+  body main .section_cartes h1 {
     padding-left: 60px;
   }
 }
@@ -439,13 +436,10 @@ body main .section_cartes .cartes_conteneur .carte .carte_img button {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 0 20px;
   border: none;
-}
-
-body main .section_cartes .cartes_conteneur .carte .carte_img button p {
-  margin: 5px 0;
   color: #0e8d6d;
+  padding: 8px 15px;
+  font-size: 14px;
 }
 
 body main .section_cartes .cartes_conteneur .carte .carte_footer_items h3 {

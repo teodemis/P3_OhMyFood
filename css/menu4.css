@@ -8,7 +8,7 @@ body {
   width: 100%;
   max-width: 1500px;
   min-width: 300px;
-  background-color: red;
+  background-color: #f2f2f2;
 }
 
 body header .header_items {
@@ -83,14 +83,14 @@ body main .menu_contneur .titres_icon {
           justify-content: space-between;
 }
 
-body main .menu_contneur .titres_icon .titre_header {
+body main .menu_contneur .titres_icon h1 {
   font-family: "Shrikhand", cursive;
   font-size: 27px;
   padding-left: 20px;
 }
 
 @media (min-width: 1024px) {
-  body main .menu_contneur .titres_icon .titre_header {
+  body main .menu_contneur .titres_icon h1 {
     padding-left: 50px;
     margin-bottom: 0;
   }
@@ -148,11 +148,27 @@ body main .menu_contneur .titres_icon .coeurs .coeur1:hover + .coeur2 {
   }
 }
 
+body main .menu_contneur .menu_entrée {
+  padding-top: 5px;
+}
+
 body main .menu_contneur .menu_entrée .entrée_titre {
   padding-left: 25px;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+}
+
+@media (min-width: 700px) {
+  body main .menu_contneur .menu_entrée .entrée_titre {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body main .menu_contneur .menu_entrée .entrée_titre {
+    padding-left: 20px;
+  }
 }
 
 body main .menu_contneur .menu_entrée .entrée_titre::after {
@@ -699,10 +715,15 @@ body main .btn_commande {
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
   margin-top: 40px;
+  padding: 10px 35px;
+  font-size: 13px;
 }
 
-body main .btn_commande p {
-  margin: 15px;
+@media (min-width: 1024px) {
+  body main .btn_commande {
+    padding: 15px 45px;
+    font-size: 15px;
+  }
 }
 
 body main .btn_commande:hover {
@@ -720,7 +741,7 @@ body footer .footer_items {
   padding: 10px;
 }
 
-body footer .footer_items .footer_logo {
+body footer .footer_items h2 {
   font-family: "Shrikhand", cursive;
   font-size: 23px;
   padding-left: 5px;
@@ -729,7 +750,7 @@ body footer .footer_items .footer_logo {
 }
 
 @media (min-width: 700px) {
-  body footer .footer_items .footer_logo {
+  body footer .footer_items h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

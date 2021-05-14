@@ -88,10 +88,7 @@ header{
     cursor:pointer;
     transition-duration:.5s;
     margin-top:20px;
-    p{
-       margin:15px;
-    }
-
+    padding:17px;
     &:hover{
       background-color:white;
       box-shadow:7px 7px 7px rgb(141, 138, 138);
@@ -106,9 +103,9 @@ header{
    text-align:center;
    margin-top:50px;
     
-.titre_buttons{
+ h1{
       @include h1-index;
-      padding-right:7rem;
+      padding-right:10rem;
       margin-bottom:0;
       @include ipad{
         display: flex;
@@ -128,7 +125,7 @@ header{
 .buttons_dechoix{
     display:flex;
     flex-direction:column;
-     padding-left:0;
+     padding-left:25px;
      margin-top:5px;
     @include ipad {
       display:flex;
@@ -140,9 +137,9 @@ header{
 
   li {
     list-style-type:none;
-  button{
+  .button{
     position: relative;
-    width:90%;
+    width:85%;
     margin:.9rem 0;
     padding:0.3rem 1rem;
     border-radius:1rem;
@@ -173,7 +170,7 @@ header{
   .btn_items{
     display:flex;
       flex-direction:column;
-      padding-left:0;
+      padding-top:12px;
       @include mobile{
         align-items: center;
 
@@ -183,7 +180,7 @@ header{
       span{
         position:absolute;
         left:-15px;
-        top:15px;
+        top:18px;
         width:2rem;
         height:2rem;
         @include flexCenter;
@@ -233,7 +230,7 @@ header{
      width:100%;
      margin-top:0;
    }
-  .header_cartes_titre{
+  h1{
     @include h1-index;
       height:100%;
       margin:0;
@@ -293,14 +290,10 @@ header{
       position:absolute;
       top:10px;
       right:10px;
-      padding:0 20px;
       border:none;
-
-      p{
-      margin:5px 0;
       color:#0e8d6d;
-      
-        }
+      padding:8px 15px;
+      font-size:14px;
     }
   }
   .carte_footer_items{
