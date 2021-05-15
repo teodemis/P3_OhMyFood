@@ -3,87 +3,96 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  background-color: white;
+  z-index: 3;
   position: fixed;
-  top: 0;
-  left: 0;
-  -webkit-animation: bg 3s linear;
-          animation: bg 3s linear;
+  -webkit-animation: bg 3s linear both;
+          animation: bg 3s linear both;
 }
 
 @-webkit-keyframes bg {
   0% {
-    background-color: white;
+    opacity: 1;
+  }
+  25% {
+    opacity: .7;
+  }
+  50% {
+    opacity: .5;
   }
   75% {
-    background-color: white;
+    opacity: .3;
   }
   100% {
-    opacity: 0.7;
-    z-index: -2;
+    opacity: 0;
+    z-index: -3;
   }
 }
 
 @keyframes bg {
   0% {
-    background-color: white;
+    opacity: 1;
+  }
+  25% {
+    opacity: .7;
+  }
+  50% {
+    opacity: .5;
   }
   75% {
-    background-color: white;
+    opacity: .3;
   }
   100% {
-    opacity: 0.7;
-    z-index: -2;
+    opacity: 0;
+    z-index: -3;
   }
 }
 
-.chargementDepage .pointsderepond {
+.chargementDepage .points {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+}
+
+.chargementDepage .points div {
+  margin: 0px 10px;
   border-radius: 50%;
 }
 
-.chargementDepage .pointsderepond div {
-  margin: 0 5px;
-  border-radius: 50%;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-.chargementDepage .pointsderepond .point1 {
+.chargementDepage .points .point1 {
   width: 20px;
   height: 20px;
   background-color: #9356DC;
-  -webkit-animation: spinner 1.3s linear 2 both;
-          animation: spinner 1.3s linear 2 both;
+  -webkit-animation: points_rebond 1.3s linear 3 both;
+          animation: points_rebond 1.3s linear 3 both;
 }
 
-.chargementDepage .pointsderepond .point2 {
+.chargementDepage .points .point2 {
   width: 20px;
   height: 20px;
   background-color: #FF79DA;
-  -webkit-animation: spinner 1.6s linear 2 both;
-          animation: spinner 1.6s linear 2 both;
+  -webkit-animation: points_rebond 1.6s linear 3 both;
+          animation: points_rebond 1.6s linear 3 both;
 }
 
-.chargementDepage .pointsderepond .point3 {
+.chargementDepage .points .point3 {
   width: 20px;
   height: 20px;
   background-color: #99E2D0;
-  -webkit-animation: spinner 1.9s linear 2 both;
-          animation: spinner 1.9s linear 2 both;
+  -webkit-animation: points_rebond 1.9s linear 3 both;
+          animation: points_rebond 1.9s linear 3 both;
 }
 
-@-webkit-keyframes spinner {
+@-webkit-keyframes points_rebond {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -98,7 +107,7 @@
   }
 }
 
-@keyframes spinner {
+@keyframes points_rebond {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -114,6 +123,7 @@
 }
 
 body {
+  position: relative;
   padding: 0;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -121,7 +131,8 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1500px;
-  min-width: 300px;
+  min-width: 100px;
+  z-index: 1;
 }
 
 @media (min-width: 700px) {
@@ -198,25 +209,27 @@ body header .header_conteneur .header_contneur_contenu {
   text-align: center;
 }
 
-body header .header_conteneur .header_contneur_contenu .titre_contenue {
-  font-size: 24px;
+body header .header_conteneur .header_contneur_contenu h1 {
+  padding: 0 15px;
+  font-size: 20px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
 }
 
 @media (min-width: 700px) {
-  body header .header_conteneur .header_contneur_contenu .titre_contenue {
+  body header .header_conteneur .header_contneur_contenu h1 {
     font-size: 25px;
   }
 }
 
-body header .header_conteneur .header_contneur_contenu .paragraph_contenu {
-  font: 500 1.2rem "Roboto", sans-serif;
+body header .header_conteneur .header_contneur_contenu p {
+  font: 500 1rem "Roboto", sans-serif;
   color: gray;
+  padding: 0 10px;
 }
 
 @media (min-width: 700px) {
-  body header .header_conteneur .header_contneur_contenu .paragraph_contenu {
+  body header .header_conteneur .header_contneur_contenu p {
     font-size: 20px;
   }
 }
@@ -249,10 +262,10 @@ body .section_buttons {
 }
 
 body .section_buttons h1 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
-  padding-right: 10rem;
+  padding-right: 7rem;
   margin-bottom: 0;
 }
 
@@ -261,11 +274,12 @@ body .section_buttons h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding: 10px 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 2rem;
     font-size: 30px;
+    margin: 10px 0;
   }
 }
 
@@ -277,7 +291,7 @@ body .section_buttons h1 {
 
 @media (min-width: 370px) {
   body .section_buttons h1 {
-    padding-right: 10rem;
+    padding-left: .5rem;
   }
 }
 
@@ -304,10 +318,16 @@ body .section_buttons .buttons_dechoix {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: 40px;
+  }
+}
+
+@media (min-width: 370px) {
+  body .section_buttons .buttons_dechoix {
+    padding-left: 50px;
   }
 }
 
@@ -317,7 +337,8 @@ body .section_buttons .buttons_dechoix li {
 
 body .section_buttons .buttons_dechoix li .button {
   position: relative;
-  width: 85%;
+  width: 83%;
+  min-width: 10%;
   margin: .9rem 0;
   padding: 0.3rem 1rem;
   border-radius: 1rem;
@@ -331,16 +352,14 @@ body .section_buttons .buttons_dechoix li .button {
 @media (min-width: 370px) {
   body .section_buttons .buttons_dechoix li .button {
     width: 70%;
-    padding-right: 45px;
+    padding-right: 60px;
   }
 }
 
 body .section_buttons .buttons_dechoix li .button:hover {
   background-color: #f4ebff;
-}
-
-body .section_buttons .buttons_dechoix li .button:hover + .fas {
-  color: red;
+  -webkit-box-shadow: 5px 5px 0.3 #afafaf;
+          box-shadow: 5px 5px 0.3 #afafaf;
 }
 
 @media (min-width: 700px) {
@@ -360,7 +379,7 @@ body .section_buttons .buttons_dechoix li .button .btn_items {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 12px;
+  padding-top: 0;
 }
 
 @media (min-width: 370px) {
@@ -371,10 +390,16 @@ body .section_buttons .buttons_dechoix li .button .btn_items {
   }
 }
 
+@media (min-width: 700px) {
+  body .section_buttons .buttons_dechoix li .button .btn_items {
+    padding-top: 20px;
+  }
+}
+
 body .section_buttons .buttons_dechoix li .button .btn_items span {
   position: absolute;
   left: -15px;
-  top: 18px;
+  top: 16px;
   width: 2rem;
   height: 2rem;
   display: -webkit-box;
@@ -406,6 +431,13 @@ body .section_buttons .buttons_dechoix li .button .btn_items .icon_text {
           align-items: center;
   padding-left: 1.2rem;
   text-align: center;
+  padding-top: 0px;
+}
+
+@media (min-width: 370px) {
+  body .section_buttons .buttons_dechoix li .button .btn_items .icon_text {
+    padding-right: 10px;
+  }
 }
 
 body .section_buttons .buttons_dechoix li .button .btn_items .icon_text .fas {
@@ -419,6 +451,12 @@ body .section_buttons .buttons_dechoix li .button .btn_items .icon_text .fas {
   }
 }
 
+@media (min-width: 370px) {
+  body .section_buttons .buttons_dechoix li .button .btn_items .icon_text .fas {
+    padding-right: 13px;
+  }
+}
+
 body .section_buttons .buttons_dechoix li .button .btn_items p {
   padding-left: 1rem;
   font: 600 1rem 'Roboto', sans-serif;
@@ -428,6 +466,13 @@ body .section_buttons .buttons_dechoix li .button .btn_items p {
 @media (min-width: 700px) {
   body .section_buttons .buttons_dechoix li .button .btn_items p {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 370px) {
+  body .section_buttons .buttons_dechoix li .button .btn_items p {
+    padding-left: 10px;
+    font-size: 14px;
   }
 }
 
@@ -444,17 +489,23 @@ body main .section_cartes {
 @media (min-width: 700px) {
   body main .section_cartes {
     width: 100%;
-    margin-top: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body main .section_cartes {
+    margin-top: 10px;
   }
 }
 
 body main .section_cartes h1 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0;
-  padding: 20px 0 0 15px;
+  padding: 20px 0 0 20px;
 }
 
 @media (min-width: 700px) {
@@ -505,7 +556,7 @@ body main .section_cartes .cartes_conteneur {
 
 body main .section_cartes .cartes_conteneur .carte {
   position: relative;
-  width: 95%;
+  width: 90%;
   background-color: white;
   margin: 20px 0 10px 0;
   border-radius: 12px;
@@ -730,12 +781,16 @@ body footer .footerparagraph_icons .contact {
 
 @media (min-width: 700px) {
   body footer .footerparagraph_icons .contact {
-    padding: 10px 0 0 60px;
+    padding: 13px 0 0 40px;
   }
 }
 
 body footer .footerparagraph_icons .contact a {
   color: white;
   text-decoration: none;
+}
+
+body footer .footerparagraph_icons .contact a:hover {
+  color: #e94b4b;
 }
 /*# sourceMappingURL=style.css.map */

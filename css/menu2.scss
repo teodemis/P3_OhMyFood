@@ -1,5 +1,6 @@
 
 @import 'config';
+@import 'chargementDepage';
 
 body{
     padding:0;
@@ -18,17 +19,17 @@ body{
        justify-content:space-between;
        .fas{
          padding-left:15px;
-         font-size:20px;
-       }
+         font-size:15px;
        }
        h1{
         display:flex;
         font-family:$police-logo-titre;
-        font-size:20px;
+        font-size:25px;
         margin:0 auto;
         @include ipad{
           font-size:35px;
         }
+       }
        }
    }
    img{
@@ -60,15 +61,16 @@ body{
        justify-content: space-between;
       h1{
          font-family:$police-logo-titre;
-          font-size:27px;
+          font-size:21px;
           padding-left:20px;
+          margin:30px 0 0;
           @include ipad{
             padding-left:50px;
           }
       }
       .coeurs{
         display:flex;
-        padding-right:50px;
+        padding:30px 20px 0 0;
         .coeur1{
           font-size: 25px;
           transform:translateX(24px);
@@ -470,7 +472,7 @@ body{
 }
 .btn_commande{
   display:flex;
-  margin:30px auto;
+  margin:40px auto 0;
   padding:0 25px;
   border:none;
   font-weight: 500;
@@ -500,14 +502,13 @@ body{
 footer{
   background-color:rgb(56, 56, 56);
   height:100%;
-  margin:20px 0;
   .footer_items{
     margin: 0px;
     padding:10px;
     h2{
       font-family:$police-logo-titre;
-      font-size:23px;
-      padding-left:5px;
+      font-size:20px;
+      padding-left:13px;
        color:rgb(231, 231, 231);
        margin:2px;
        @include ipad {
@@ -574,7 +575,7 @@ footer{
         color:white;
         text-decoration: none;
         &:hover{
-          color:rgb(238, 164, 164) ;
+          color:rgb(233, 75, 75);
         }
       }
   }
