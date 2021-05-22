@@ -130,7 +130,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1500px;
-  min-width: 300px;
+  min-width: 100px;
   background-color: #f2f2f2;
 }
 
@@ -219,11 +219,29 @@ body main .menu_contneur .titres_icon h1 {
   }
 }
 
+@media (min-width: 1024px) {
+  body main .menu_contneur .titres_icon h1 {
+    padding-left: 70px;
+  }
+}
+
 body main .menu_contneur .titres_icon .coeurs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 30px 20px 0 0;
+}
+
+@media (min-width: 700px) {
+  body main .menu_contneur .titres_icon .coeurs {
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body main .menu_contneur .titres_icon .coeurs {
+    padding-right: 50px;
+  }
 }
 
 body main .menu_contneur .titres_icon .coeurs .coeur1 {

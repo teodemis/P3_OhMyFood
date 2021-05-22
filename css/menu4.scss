@@ -7,7 +7,7 @@ body{
     height:100%;
     width:100%;
     max-width:1500px;
-    min-width:300px;
+    min-width:100px;
     background-color:$fond-gris;
     
  
@@ -28,6 +28,9 @@ body{
         margin:0 auto;
         @include ipad{
           font-size:35px;
+        }
+        @include desktop{
+          padding-left:70px;
         }
        }
    }
@@ -64,14 +67,22 @@ body{
           font-size:21px;
           margin:30px 0 0;
           padding-left:20px;
-          @include desktop{
+          @include ipad{
             padding-left:50px;
-            margin-bottom:0;
+          }
+          @include desktop{
+            padding-left:70px;
           }
       }
       .coeurs{
         display:flex;
         padding:30px 20px 0 0;
+        @include ipad{
+          padding-right:40px;
+        }
+        @include desktop{
+          padding-right:50px;
+        }
         .coeur1{
           font-size: 25px;
           transform:translateX(24px);
@@ -91,11 +102,9 @@ body{
          .coeur1:hover + .coeur2{
            opacity:0.9;
            transform: scale(1);
-         }
-        
+         }       
       }
      }
-
      .box_menu_contneur{
        @include ipad{
          display:block;
@@ -106,8 +115,6 @@ body{
          }
        }
      }
-
-
      .menu_entrée{
        padding-top:5px;
       .entrée_titre {
@@ -130,8 +137,6 @@ body{
         height:2px;
         width:55px; 
       }
-        
-
      .menu{
        display:flex;
        justify-content:center;

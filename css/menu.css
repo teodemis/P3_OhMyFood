@@ -123,6 +123,7 @@
 }
 
 body {
+  position: relative;
   padding: 0;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -130,9 +131,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1500px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  min-width: 100px;
   background-color: #f2f2f2;
 }
 
@@ -232,6 +231,18 @@ body main .menu_contneur .titres_icon .coeurs {
   display: -ms-flexbox;
   display: flex;
   padding: 30px 20px 0 0;
+}
+
+@media (min-width: 700px) {
+  body main .menu_contneur .titres_icon .coeurs {
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body main .menu_contneur .titres_icon .coeurs {
+    padding-right: 50px;
+  }
 }
 
 body main .menu_contneur .titres_icon .coeurs .coeur1 {

@@ -9,7 +9,7 @@ body{
     height:100%;
     width:100%;
     max-width:1500px;
-    min-width:300px;
+    min-width:100px;
     background-color:$fond-gris;
  
   header{ 
@@ -67,10 +67,19 @@ body{
           @include ipad{
             padding-left:50px;
           }
+          @include desktop{
+            padding-left:70px;
+          }
       }
       .coeurs{
         display:flex;
         padding:30px 20px 0 0;
+        @include ipad{
+          padding-right:40px;
+        }
+        @include desktop{
+          padding-right:50px;
+        }
         .coeur1{
           font-size: 25px;
           transform:translateX(24px);

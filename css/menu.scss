@@ -3,13 +3,14 @@
 @import 'chargementDepage';
 
 body{
+  position: relative;
     padding:0;
     margin:0 auto;
     box-sizing:border-box;
     height:100%;
     width:100%;
     max-width:1500px;
-    min-width:fit-content;
+    min-width:100px;
     background-color:$fond-gris;
  
   header{ 
@@ -76,6 +77,12 @@ body{
       .coeurs{
         display:flex;
         padding:30px 20px 0 0;
+        @include ipad{
+          padding-right:40px;
+        }
+        @include desktop{
+          padding-right:50px;
+        }
         .coeur1{
           font-size: 25px;
           transform:translateX(24px);
@@ -296,7 +303,7 @@ body{
       
    .menuPlat_titre_icon{
     white-space: nowrap;
-    overflow: hidden;
+     overflow: hidden;
     text-overflow: ellipsis;
       h2{
       @include section-h2;
@@ -364,9 +371,6 @@ body{
     
     }
 }
-
-
-
 .menu_desserts{
   .titre_déssert {
     padding-left:20px;
