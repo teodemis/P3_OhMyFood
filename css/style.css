@@ -58,9 +58,33 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
   top: 50%;
-  right: 50%;
+  left: 35%;
+}
+
+@media (min-width: 370px) {
+  .chargementDepage .points {
+    left: 40%;
+  }
+}
+
+@media (min-width: 700px) {
+  .chargementDepage .points {
+    left: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chargementDepage .points {
+    left: 43%;
+  }
 }
 
 .chargementDepage .points div {
@@ -356,12 +380,6 @@ body .section_buttons .buttons_dechoix li .button {
   }
 }
 
-body .section_buttons .buttons_dechoix li .button:hover {
-  background-color: #f4ebff;
-  -webkit-box-shadow: 5px 5px 0.3 #afafaf;
-          box-shadow: 5px 5px 0.3 #afafaf;
-}
-
 @media (min-width: 700px) {
   body .section_buttons .buttons_dechoix li .button {
     margin: 10px 45px 10px 20px;
@@ -369,6 +387,10 @@ body .section_buttons .buttons_dechoix li .button:hover {
     width: 300px;
     height: 90px;
   }
+}
+
+body .section_buttons .buttons_dechoix li .button:hover {
+  background-color: #f0e5f7;
 }
 
 body .section_buttons .buttons_dechoix li .button .btn_items {
@@ -398,6 +420,8 @@ body .section_buttons .buttons_dechoix li .button .btn_items {
 
 body .section_buttons .buttons_dechoix li .button .btn_items span {
   position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   left: -15px;
   top: 16px;
   width: 2rem;
@@ -476,30 +500,34 @@ body .section_buttons .buttons_dechoix li .button .btn_items p {
   }
 }
 
-body main {
+body .section_buttons .buttons_dechoix li .button .btn_items:hover .fas {
+  color: #9356DC;
+}
+
+main {
   background-color: #f2f2f2;
 }
 
-body main .section_cartes {
+main .section_cartes {
   background-color: #f2f2f2;
   height: 100%;
   margin-top: 50px;
 }
 
 @media (min-width: 700px) {
-  body main .section_cartes {
+  main .section_cartes {
     width: 100%;
     margin-top: 20px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .section_cartes {
+  main .section_cartes {
     margin-top: 10px;
   }
 }
 
-body main .section_cartes h1 {
+main .section_cartes h1 {
   font-size: 20px;
   font-weight: bold 700;
   font-family: 'Roboto', sans-serif;
@@ -509,19 +537,19 @@ body main .section_cartes h1 {
 }
 
 @media (min-width: 700px) {
-  body main .section_cartes h1 {
+  main .section_cartes h1 {
     padding-left: 40px;
     font-size: 30px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .section_cartes h1 {
+  main .section_cartes h1 {
     padding-left: 60px;
   }
 }
 
-body main .section_cartes .cartes_conteneur {
+main .section_cartes .cartes_conteneur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,7 +563,7 @@ body main .section_cartes .cartes_conteneur {
 }
 
 @media (min-width: 700px) {
-  body main .section_cartes .cartes_conteneur {
+  main .section_cartes .cartes_conteneur {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -554,7 +582,7 @@ body main .section_cartes .cartes_conteneur {
   }
 }
 
-body main .section_cartes .cartes_conteneur .carte {
+main .section_cartes .cartes_conteneur .carte {
   position: relative;
   width: 90%;
   background-color: white;
@@ -564,14 +592,14 @@ body main .section_cartes .cartes_conteneur .carte {
           box-shadow: 2px 2px 2px 2px #c4c4c4;
 }
 
-body main .section_cartes .cartes_conteneur .carte:hover {
+main .section_cartes .cartes_conteneur .carte:hover {
   -webkit-box-shadow: 2px 2px 2px 2px #c4c4c4;
           box-shadow: 2px 2px 2px 2px #c4c4c4;
   background-color: #ececec;
 }
 
 @media (min-width: 700px) {
-  body main .section_cartes .cartes_conteneur .carte {
+  main .section_cartes .cartes_conteneur .carte {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -586,7 +614,7 @@ body main .section_cartes .cartes_conteneur .carte:hover {
   }
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_img img {
+main .section_cartes .cartes_conteneur .carte .carte_img img {
   min-width: 150px;
   width: 100%;
   height: 200px;
@@ -596,12 +624,12 @@ body main .section_cartes .cartes_conteneur .carte .carte_img img {
 }
 
 @media (min-width: 1024px) {
-  body main .section_cartes .cartes_conteneur .carte .carte_img img {
+  main .section_cartes .cartes_conteneur .carte .carte_img img {
     height: 320px;
   }
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_img button {
+main .section_cartes .cartes_conteneur .carte .carte_img button {
   background-color: #99E2D0;
   font: bold 1rem 'Roboto', sans-serif;
   position: absolute;
@@ -613,7 +641,7 @@ body main .section_cartes .cartes_conteneur .carte .carte_img button {
   font-size: 14px;
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_footer_items h3 {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items h3 {
   font-size: 18px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
@@ -621,7 +649,7 @@ body main .section_cartes .cartes_conteneur .carte .carte_footer_items h3 {
   padding-left: 10px;
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_footer_items p {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -630,7 +658,7 @@ body main .section_cartes .cartes_conteneur .carte .carte_footer_items p {
   margin-bottom: 7px;
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,7 +667,7 @@ body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs {
   right: 20px;
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .coeur1 {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .coeur1 {
   font-size: 25px;
   -webkit-transform: translateX(24px);
           transform: translateX(24px);
@@ -648,7 +676,7 @@ body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .
   color: #858383;
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .coeur2 {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .coeur2 {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   background: -webkit-linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
@@ -661,7 +689,7 @@ body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .
   cursor: pointer;
 }
 
-body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .coeur1:hover + .coeur2 {
+main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .coeur1:hover + .coeur2 {
   opacity: 0.9;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -669,29 +697,29 @@ body main .section_cartes .cartes_conteneur .carte .carte_footer_items .coeurs .
   cursor: pointer;
 }
 
-body footer {
+footer {
   background-color: #383838;
   height: 100%;
-  margin: 20px 0;
+  margin-top: 0px;
 }
 
-body footer .footer_items {
+footer .footer_items {
   margin: 0 10px;
-  padding: 20px;
+  padding: 10px;
 }
 
-body footer .footer_logo {
+footer h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: "Shrikhand", cursive;
   font-size: 20px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   color: white;
 }
 
 @media (min-width: 700px) {
-  body footer .footer_logo {
+  footer h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -702,7 +730,7 @@ body footer .footer_logo {
 }
 
 @media (min-width: 700px) {
-  body footer .footerparagraph_icons {
+  footer .footerparagraph_icons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -716,11 +744,12 @@ body footer .footer_logo {
   }
 }
 
-body footer .footerparagraph_icons div {
+footer .footerparagraph_icons div {
   padding: 0 10px;
 }
 
-body footer .footerparagraph_icons .footer_propose {
+footer .footerparagraph_icons .footer_propose {
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -730,7 +759,8 @@ body footer .footerparagraph_icons .footer_propose {
   color: #dbdbdb;
 }
 
-body footer .footerparagraph_icons .footer_partneur {
+footer .footerparagraph_icons .footer_partneur {
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,7 +770,7 @@ body footer .footerparagraph_icons .footer_partneur {
   color: #ececec;
 }
 
-body footer .footerparagraph_icons p {
+footer .footerparagraph_icons p {
   font-size: 18px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
@@ -749,17 +779,17 @@ body footer .footerparagraph_icons p {
   margin: 5px;
 }
 
-body footer .footerparagraph_icons .mention_légal {
-  padding: 10px 0;
+footer .footerparagraph_icons .mention_légal {
+  padding: 2px 0;
 }
 
 @media (min-width: 700px) {
-  body footer .footerparagraph_icons .mention_légal {
+  footer .footerparagraph_icons .mention_légal {
     padding-top: 20px 0 0 20px;
   }
 }
 
-body footer .footerparagraph_icons .mention_légal a {
+footer .footerparagraph_icons .mention_légal a {
   font-size: 18px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
@@ -769,28 +799,28 @@ body footer .footerparagraph_icons .mention_légal a {
   text-decoration: none;
 }
 
-body footer .footerparagraph_icons .contact {
+footer .footerparagraph_icons .contact {
   font-size: 18px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  padding: 0;
+  padding: 6px 0;
   color: #dbdbdb;
   padding-bottom: 20px;
 }
 
 @media (min-width: 700px) {
-  body footer .footerparagraph_icons .contact {
+  footer .footerparagraph_icons .contact {
     padding: 13px 0 0 40px;
   }
 }
 
-body footer .footerparagraph_icons .contact a {
+footer .footerparagraph_icons .contact a {
   color: white;
   text-decoration: none;
 }
 
-body footer .footerparagraph_icons .contact a:hover {
+footer .footerparagraph_icons .contact a:hover {
   color: #e94b4b;
 }
 /*# sourceMappingURL=style.css.map */

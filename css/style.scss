@@ -11,6 +11,7 @@ body{
   max-width:1500px;
   min-width:100px;
   z-index:1;
+
 @include ipad{
   width:100%;
 }
@@ -26,7 +27,7 @@ header{
   display:flex;
   justify-content: center;
   font-family:$police-logo-titre;
-   font-size:30px;
+  font-size:30px;
   margin-left:auto;
   padding-top:20px;
     
@@ -93,7 +94,7 @@ header{
     transition-duration:.5s;
     margin-top:20px;
     padding:17px;
-    &:hover{
+    &:hover {
       background-color:white;
       box-shadow:7px 7px 7px rgb(141, 138, 138);
     }
@@ -160,19 +161,16 @@ header{
       width:70%;
       padding-right:60px ;
     }
-    &:hover{
-    background-color:#f4ebff;
-    box-shadow:5px 5px 0.3 rgb(175, 175, 175);
-  }
- 
-
   @include ipad{
    margin:10px 45px 10px 20px;
    padding:0 10px;
    width:300px;
    height:90px;
   }
-
+&:hover{
+  background-color:rgb(240, 229, 247);
+}
+ 
   .btn_items{
     display:flex;
       flex-direction:column;
@@ -183,10 +181,10 @@ header{
       @include ipad{
         padding-top:20px;
       }
-     
-    
-      span{
+    span{
         position:absolute;
+        font-family:$police-text;
+        font-weight:600;
         left:-15px;
         top:16px;
         width:2rem;
@@ -210,15 +208,14 @@ header{
 
     .fas{
          color:rgb(138, 136, 136);
-          padding-right:10px;
-
+         padding-right:10px;
         @include ipad{
           padding-right:0;
         }
         @include mobile{
           padding-right:13px;
-        }      
         }
+      }
         }
       p{
         padding-left:1rem;
@@ -232,11 +229,17 @@ header{
          font-size:14px;
        }
       }
+      &:hover .fas{
+        color:#9356DC;
      }
+     }
+
     }
   }
   }
-  }  
+  }
+  }
+   
   // main
  
    main{
@@ -361,35 +364,30 @@ header{
        opacity:0.9;
        transform: scale(1);
        z-index:2;
-       cursor: pointer;
-
-      
-     
-     }
-    
+       cursor: pointer;   
+     }    
   }
   }
 
   } 
 }
 }
-
   }
 footer{
   background-color:rgb(56, 56, 56);
   height:100%;
-  margin:20px 0;
+  margin-top:0px;
  
   .footer_items{
     margin:0 10px;
-    padding:20px;
+    padding:10px;
     
     }
-    .footer_logo{
+    h2{
       display:flex;
       font-family:$police-logo-titre;
        font-size:20px;
-      margin-bottom:0;
+      margin-bottom:10px;
       color:white;
        @include ipad{
          display:flex;
@@ -407,10 +405,12 @@ footer{
       }
     
     .footer_propose{
+      padding-left:0;
       @include flexCenter2;
       color: rgb(219, 219, 219);
     }
     .footer_partneur{
+      padding-left:0;
       @include flexCenter2;
       color: rgb(236, 236, 236);
     }
@@ -423,7 +423,7 @@ footer{
     
   } 
   .mention_légal{
-    padding:10px 0;
+    padding:2px 0;
     @include ipad{
       padding-top:20px 0 0 20px;
     }
@@ -439,7 +439,7 @@ footer{
   .contact{
       @include section-h3;
       font-size:12px;
-      padding:0 ;
+      padding:6px 0 ;
       color:rgb(219, 219, 219);
       padding-bottom:20px;
       @include ipad{
@@ -456,7 +456,7 @@ footer{
   }
   }
 }
-}
+
 
 
 

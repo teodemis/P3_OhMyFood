@@ -31,9 +31,22 @@
 
  .points{
    display:flex;
-  position:fixed;
+   justify-content:center;
+   align-items: center;
+   position:absolute;
    top:50%;
-   right:50%;
+   left:35%;
+   @include mobile{
+     left:40%;
+   }
+   @include ipad{
+     left:40%;
+   }
+   @include desktop{
+     left:43%;
+   }
+  
+   
   
    
    div{
